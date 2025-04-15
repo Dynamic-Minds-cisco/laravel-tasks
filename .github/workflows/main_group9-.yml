@@ -1,7 +1,8 @@
-# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
+
+     # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy PHP app to Azure Web App - group9-
+name: Build and deploy PHP app to Azure Web App - lab5randy2
 
 on:
   push:
@@ -64,15 +65,14 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_C0F72312037944A49FD472A9C4069714 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_D6B7570ADB994EBB86FD585C8DA66360 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_49C81E7DEED947618F34D726DD3C68EB }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_C12B090888C746399895262784953E27 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_18453118C042493F8E091A878682C32A }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_8B0DAFBAD91D4072B2A8952CB22152AD }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
         with:
-          app-name: 'group9-'
+          app-name: 'lab5randy2'
           slot-name: 'Production'
-          package: .
-          
+          package: .     
